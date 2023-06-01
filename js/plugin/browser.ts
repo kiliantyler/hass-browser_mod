@@ -10,6 +10,7 @@ export const BrowserStateMixin = (SuperClass) => {
       window.addEventListener("location-changed", () =>
         this._browser_state_update()
       );
+      window.addEventListener("resize", () => this._browser_state_update());
 
       this.addEventListener("fully-update", () => this._browser_state_update());
 
